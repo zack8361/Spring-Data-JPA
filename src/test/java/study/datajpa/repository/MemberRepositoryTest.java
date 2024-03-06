@@ -171,11 +171,9 @@ public class MemberRepositoryTest {
         em.clear();
         //when
 
-        List<Member> members = memberRepository.findAll();
-
-        for (Member member : members) {
-            System.out.println("member = " + member.getUsername());
-            System.out.println(member.getTeam().getName());
+        List<Member> all = memberRepository.findAll();
+        for (Member member : all) {
+            System.out.println("member = " + member.getTeam());
         }
     }
 }
